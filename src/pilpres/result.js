@@ -3,7 +3,7 @@
 import axios from 'axios'
 
 export async function routes(fastify, options) {
-    fastify.get('/pilpres', async (request, reply) => {
+    fastify.get('/', async (request, reply) => {
         await axios.get('https://sirekap-obj-data.kpu.go.id/pemilu/hhcw/ppwp.json')
             .then(response => {
                 reply.send({
