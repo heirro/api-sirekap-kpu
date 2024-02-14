@@ -2,7 +2,7 @@ import Fastify from 'fastify'
 import { routes } from './src/pilpres/result.js'
 
 const fastify = Fastify({
-  logger: true
+  logger: false
 })
 
 fastify.register(routes)
