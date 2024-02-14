@@ -25,7 +25,7 @@ export async function routes(fastify, options) {
                             }
                         },
                         progress: {
-                            remark: "Apa ini? current dan total yang menunjukkan jumlah TPS yang sudah input real data dan total TPS yang ada.",
+                            remark: "current dan total yang menunjukkan jumlah TPS yang sudah input real data dan total TPS yang ada.",
                             current: response.data.progres['progres'],
                             total: response.data.progres['total'],
                             percentage: response.data.chart['persen']
