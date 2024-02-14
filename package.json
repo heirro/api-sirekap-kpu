@@ -1,0 +1,17 @@
+{
+  "name": "sirekap-kpu",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "app.js",
+  "author": "Vava Heirro",
+  "license": "MIT",
+  "private": false,
+  "description": "OpenAPI #Pemilu2024 Real Count",
+  "scripts": {
+    "start": "node --watch app.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "fastify": "^4.26.1"
+  }
+}
