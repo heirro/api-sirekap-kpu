@@ -12,11 +12,11 @@ Ikuti langkah-langkah berikut untuk menginstal proyek:
 
 1. Clone repositori ini:
 ```bash
-git clone https://github.com/yourusername/your-fastify-project.git
+git clone https://github.com/heirro/api-sirekap-kpu.git
 ```
 2. 
 ```bash
-cd your-fastify-project
+cd api-sirekap-kpu
 ```
 3. 
 ```bash
