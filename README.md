@@ -31,7 +31,9 @@ npm start
 
 ## Endpoint
 - **Local:** [http://localhost:3000](http://localhost:3000)
-- **Live:** [https://sirekap-kpu.heirro.dev](https://sirekap-kpu.heirro.dev)
+- **Live:** 
+    - [https://sirekap-kpu.heirro.dev](https://sirekap-kpu.heirro.dev) (All Data)
+    - [https://sirekap-kpu.heirro.dev/province](https://sirekap-kpu.heirro.dev/province) (Filter by Province)
 
 ## Kontribusi
 Jika Anda ingin berkontribusi pada proyek ini, silakan buat _pull request_.
