@@ -13,7 +13,7 @@ async function fetchProvinceData(provinceCode, provinceData) {
             ...obj,
             [index + 1]: {
                 voters: data.chart[key] || 0,
-                percentage: totalVoters ? parseFloat(((data.chart[key] || 0 / totalVoters) * 100).toFixed(2)) : 0
+                percentage: totalVoters ? parseFloat(((data.chart[key] / totalVoters) * 100).toFixed(2)) : 0
             }
         }), {}) : {},
         progress: {
