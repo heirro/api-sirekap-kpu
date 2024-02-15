@@ -29,7 +29,9 @@ Setelah instalasi selesai, Anda dapat menjalankan proyek dengan perintah berikut
 npm start
 ```
 
-Proyek sekarang harus berjalan di http://localhost:3000.
+## Endpoint
+- **Local:** [http://localhost:3000](http://localhost:3000)
+- **Live:** [https://sirekap-kpu.heirro.dev](https://sirekap-kpu.heirro.dev)
 
 ## Kontribusi
 Jika Anda ingin berkontribusi pada proyek ini, silakan buat _pull request_.
