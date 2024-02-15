@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "axios": "^1.6.7",
+    "dotenv": "^16.4.4",
     "fastify": "^4.26.1"
   }
 }
