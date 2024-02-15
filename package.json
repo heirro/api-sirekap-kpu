@@ -8,7 +8,8 @@
   "private": false,
   "description": "OpenAPI #Pemilu2024 Real Count",
   "scripts": {
-    "start": "node --watch app.js"
+    "dev": "node --watch app.js",
+    "start": "node app.js"
   },
   "dependencies": {
     "axios": "^1.6.7",
