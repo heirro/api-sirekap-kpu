@@ -2,7 +2,7 @@ module.exports = {
 	apps: [
 		{
 			name: 'sirekap-kpu',
-			script: '/var/www/api-sirekap-kpu/app.js',
+			script: 'app.js',
 			args: '',
 			interpreter: 'node',
 			instances: 'max',
