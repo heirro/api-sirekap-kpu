@@ -6,10 +6,6 @@ const fastify = Fastify({
   logger: false
 })
 
-fastify.get('/loaderio-88f18b6967d301353c4b45fbf3a5e09e.txt', async (request, reply) => {
-  reply.send('loaderio-88f18b6967d301353c4b45fbf3a5e09e')
-})
-
 fastify.register(province)
 fastify.register(result)
 
