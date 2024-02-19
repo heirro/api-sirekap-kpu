@@ -1,0 +1,26 @@
+name: Deploy api-sirekap-kpu
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        script: |
+          cd /var/www/api-sirekap-kpu || exit 1
+          git pull || exit 1
+          npm i || exit 1
+          npm run build || exit 1
+          pm2 ls | grep sirekap-kpu&& \
+            pm2 restart ecosystem.config.js || \
+            pm2 start ecosystem.config.js
