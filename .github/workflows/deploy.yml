@@ -20,7 +20,6 @@ jobs:
           cd /var/www/api-sirekap-kpu || exit 1
           git pull || exit 1
           npm i || exit 1
-          npm run build || exit 1
-          pm2 ls | grep sirekap-kpu&& \
+          pm2 ls | grep sirekap-kpu && \
             pm2 restart ecosystem.config.js || \
             pm2 start ecosystem.config.js
