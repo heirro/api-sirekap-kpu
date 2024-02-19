@@ -20,3 +20,4 @@ jobs:
           cd /var/www/api-sirekap-kpu || exit 1
           git pull || exit 1
           npm i && pm2 reload ecosystem.config.cjs || exit 1
+          pm2 save
