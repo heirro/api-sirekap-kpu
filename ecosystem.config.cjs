@@ -2,8 +2,8 @@ module.exports = {
 	apps: [
 		{
 			name: 'sirekap-kpu',
-			script: 'npm',
-			args: 'run start',
+			script: '/var/www/api-sirekap-kpu/app.js ',
+			interpreter: 'node',
 			instances: 'max',
 			exec_mode: 'cluster',
 		},
