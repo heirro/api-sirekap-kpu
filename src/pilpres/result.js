@@ -4,9 +4,14 @@ import axios from 'axios'
 const PASLON_KEYS = ['100025', '100026', '100027'];
 const BASE_URL = 'https://sirekap-obj-data.kpu.go.id';
 
+function formattedNumber(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
 async function fetchProvinceData(provinceCode, provinceData) {
     const { data } = await axios.get(`${BASE_URL}/pemilu/hhcw/ppwp/${provinceCode}.json`);
     const totalVoters = data.chart ? PASLON_KEYS.reduce((sum, key) => sum + (data.chart[key] || 0), 0) : 0;
+
     return {
         name: provinceData.find(prov => prov.kode === provinceCode).nama,
         paslon: data.chart ? PASLON_KEYS.reduce((obj, key, index) => ({
@@ -20,7 +25,7 @@ async function fetchProvinceData(provinceCode, provinceData) {
             current: data.progres?.['progres'] || 0,
             total: data.progres?.['total'] || 0,
             percentage: data.chart?.['persen'] || 0,
-            description: `${(data.progres?.['progres'] || 0) / 1000} dari ${(data.progres?.['total'] || 0) / 1000} TPS`
+            description: `${(formattedNumber(data.progres?.['progres']))} dari ${(formattedNumber(data.progres?.['total']))} TPS`
         }
     };
 }
@@ -54,7 +59,7 @@ export async function result(fastify, options) {
                         current: responseData.progres['progres'],
                         total: responseData.progres['total'],
                         percentage: responseData.chart['persen'],
-                        description: `${responseData.progres['progres'] / 1000} dari ${responseData.progres['total'] / 1000} TPS`,
+                        description: `${formattedNumber(responseData.progres['progres'])} dari ${formattedNumber(responseData.progres['total'])} TPS`,
                     },
                     paslon,
                     province,
